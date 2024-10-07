@@ -53,7 +53,7 @@ class HomeController extends Controller
     public function show(string $id)
     {
         $data = DB::table('users')
-            ->join('bitcoin', 'users.id_user', '=', 'bitcoin.pembeli') 
+            ->join('bitcoin', 'users.id_user', '=', 'bitcoin.pembeli')  
             ->where('id_user', $id)
             ->get();
 
